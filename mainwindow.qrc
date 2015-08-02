@@ -1,2 +1,8 @@
-<RCC/>
-
+<RCC>
+    <qresource prefix="/mainwindow">
+        <file>img/icon.png</file>
+        <file>img/cancel.png</file>
+        <file>img/launch.png</file>
+        <file>img/restart.png</file>
+    </qresource>
+</RCC>
