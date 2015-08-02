@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->statusBar->showMessage("Idle.");
 }
 
 MainWindow::~MainWindow()
@@ -15,7 +16,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::launchGame() const {
     ui->statusBar->showMessage("Launching the game...");
-    system("./launch.sh");
+    std::string launchCommand = "./" + GAME_EXECUTABLE + " " + ui->lineEditArguments->text().toStdString();
+    system(launchCommand.c_str());
     ui->statusBar->showMessage("Game launched.");
 
     if(autoRestart) {

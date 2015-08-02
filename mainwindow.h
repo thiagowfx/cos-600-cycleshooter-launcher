@@ -23,6 +23,7 @@ private:
     Ui::MainWindow *ui;
     bool autoRestart;
     const int AUTO_RESTART_DELAY = 3000;
+    const std::string GAME_EXECUTABLE = "Cycleshooter";
 
 private slots:
     void launchGame() const;
