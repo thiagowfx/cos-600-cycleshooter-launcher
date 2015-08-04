@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->statusBar->showMessage("Idle.");
-    ui->videoPlayer->load(Phonon::MediaSource(QUrl::fromLocalFile(QFileInfo("video/just_do_it.mp4").absoluteFilePath())));
+    ui->videoPlayer->load(Phonon::MediaSource(QUrl::fromLocalFile(QFileInfo("just_do_it.mp4").absoluteFilePath())));
 }
 
 MainWindow::~MainWindow()

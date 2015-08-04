@@ -12,7 +12,7 @@ TARGET = CycleshooterLauncher
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
+SOURCES += main.cpp \
         mainwindow.cpp
 
 HEADERS  += mainwindow.h
@@ -24,5 +24,11 @@ RESOURCES += \
 
 CONFIG += c++11
 
-INCLUDEPATH += /usr/include/phonon4qt5
-LIBS += /usr/lib/libphonon4qt5.so
+CycleshooterLauncher.files = CycleshooterLauncher \
+                             *.mp4
+CycleshooterLauncher.path = dest/bin
+
+INSTALLS += CycleshooterLauncher
+
+unix: CONFIG += link_pkgconfig
+unix: PKGCONFIG += phonon4qt5
