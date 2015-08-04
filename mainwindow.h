@@ -4,6 +4,7 @@
 #include <QCoreApplication>
 #include <QMainWindow>
 #include <QTime>
+#include <phonon/MediaSource>
 
 void delay(int millisecondsToWait);
 
@@ -28,6 +29,7 @@ private:
 private slots:
     void launchGame() const;
     void on_checkBoxAutoRestart_stateChanged(int arg1);
+    void on_pushButtonPlayPause_clicked();
 };
 
 #endif // MAINWINDOW_H

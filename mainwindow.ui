@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>217</width>
-    <height>123</height>
+    <width>338</width>
+    <height>369</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -56,7 +56,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Arguments</string>
+         <string>Argu&amp;ments</string>
         </property>
         <property name="buddy">
          <cstring>label</cstring>
@@ -86,6 +86,23 @@
      </layout>
     </item>
     <item>
+     <widget class="Phonon::VideoPlayer" name="videoPlayer">
+      <property name="baseSize">
+       <size>
+        <width>800</width>
+        <height>600</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButtonPlayPause">
+      <property name="text">
+       <string>Play/Pause</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QCheckBox" name="checkBoxAutoRestart">
       <property name="toolTip">
        <string>Relaunch the game after it finishes.</string>
@@ -104,6 +121,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Phonon::VideoPlayer</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/videoplayer.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>pushButtonLaunch</tabstop>
   <tabstop>pushButtonQuit</tabstop>

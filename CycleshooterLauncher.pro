@@ -23,3 +23,6 @@ RESOURCES += \
     mainwindow.qrc
 
 CONFIG += c++11
+
+INCLUDEPATH += /usr/include/phonon4qt5
+LIBS += /usr/lib/libphonon4qt5.so

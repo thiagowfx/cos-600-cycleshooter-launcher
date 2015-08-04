@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->statusBar->showMessage("Idle.");
+    ui->videoPlayer->load(Phonon::MediaSource(QUrl("qrc:///mainwindow/video/just_do_it.mp4")));
 }
 
 MainWindow::~MainWindow()
@@ -48,4 +49,10 @@ void delay(int millisecondsToWait) {
     while(QTime::currentTime() < dieTime) {
         QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
     }
+}
+
+void MainWindow::on_pushButtonPlayPause_clicked() {
+    static bool isPlaying = false;
+    isPlaying ? ui->videoPlayer->pause() : ui->videoPlayer->play();
+    isPlaying = !isPlaying;
 }
