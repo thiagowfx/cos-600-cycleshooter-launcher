@@ -4,6 +4,5 @@
         <file>img/cancel.png</file>
         <file>img/launch.png</file>
         <file>img/restart.png</file>
-        <file>video/just_do_it.mp4</file>
     </qresource>
 </RCC>

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QCoreApplication>
+#include <QFileInfo>
 #include <QMainWindow>
 #include <QTime>
 #include <phonon/MediaSource>
